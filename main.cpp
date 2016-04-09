@@ -77,6 +77,7 @@ int main()
                     break;
                 }
 
+                packet.clear();
                 if(socket.receive(packet) != sf::Socket::Done)
                 {
                     std::cout << "Error receiving data!\n";
@@ -99,6 +100,7 @@ int main()
 
             while(1)
             {
+                packet.clear();
                 if(socket.receive(packet) != sf::Socket::Done)
                 {
                     std::cout << "Error receiving data!\n";
