@@ -6,15 +6,17 @@
 #include <iostream>
 
 // client = 1, server = 0
-const bool client = 0;
+const bool client = 1;
 const int port = 12345;
 
 int main()
 {
     if(client)
     {
+        std::cout << "Creating socket on port " << port << "...\n";
         sf::TcpSocket socket;
         sf::Socket::Status status = socket.connect("msquared169.ddns.net", port);
+        std::cout << "Connected socket\n";
         if(status != sf::Socket::Done)
         {
             std::cout << "Error connecting socket!\n";
