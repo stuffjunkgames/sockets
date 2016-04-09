@@ -178,6 +178,7 @@ int main()
             }
 
             x = 0;
+            packet.clear();
             packet << x;
             if(client2.send(packet) != sf::Socket::Done)
             {
@@ -239,6 +240,7 @@ int main()
             }
 
             x = 0;
+            packet.clear();
             packet << x;
             if(client1.send(packet) != sf::Socket::Done)
             {
@@ -246,6 +248,7 @@ int main()
             }
 
             std::string s;
+            packet.clear();
             while(1)
             {
                 if(client2.receive(packet) != sf::Socket::Done)
