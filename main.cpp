@@ -60,11 +60,7 @@ int main()
             while(1)
             {
                 std::cin >> s;
-                //std::cout << s << std::endl;
-//                packet << s;
-//                packet >> s;
-//                std::cout << s << std::endl;
-
+                packet.clear();
                 packet << s;
                 if(socket.send(packet) != sf::Socket::Done)
                 {
@@ -96,7 +92,7 @@ int main()
         }
         else if(x == 0)
         {
-            std::cout << "Server selected other client to go first.  Please wait.";
+            std::cout << "Server selected other client to go first.  Please wait.\n";
 
             while(1)
             {
@@ -116,11 +112,7 @@ int main()
                 }
 
                 std::cin >> s;
-                //std::cout << s << std::endl;
-//                packet << s;
-//                packet >> s;
-//                std::cout << s << std::endl;
-
+                packet.clear();
                 packet << s;
                 if(socket.send(packet) != sf::Socket::Done)
                 {
