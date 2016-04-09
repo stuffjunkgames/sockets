@@ -192,6 +192,7 @@ int main()
             packet.clear();
             while(1)
             {
+                packet.clear();
                 if(client1.receive(packet) != sf::Socket::Done)
                 {
                     std::cout << "Error receiving packet from client 1\n";
@@ -211,6 +212,7 @@ int main()
                     break;
                 }
 
+                packet.clear();
                 if(client2.receive(packet) != sf::Socket::Done)
                 {
                     std::cout << "Error receiving packet from client 2\n";
@@ -253,6 +255,7 @@ int main()
             packet.clear();
             while(1)
             {
+                packet.clear();
                 if(client2.receive(packet) != sf::Socket::Done)
                 {
                     std::cout << "Error receiving packet from client 2\n";
@@ -272,6 +275,7 @@ int main()
                     break;
                 }
 
+                packet.clear();
                 if(client1.receive(packet) != sf::Socket::Done)
                 {
                     std::cout << "Error receiving packet from client 1\n";
