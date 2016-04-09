@@ -12,6 +12,22 @@ const int port = 12345;
 
 int main()
 {
+//    while(1)
+//    {
+//        std::string s;
+//        sf::Packet packet;
+//        int x = 1;
+//        packet << x;
+//        packet >> x;
+//        std::cin >> s;
+//
+//        std::cout << s << std::endl;
+//        packet << s;
+//        std::cout << s << std::endl;
+//        packet >> s;
+//        std::cout << s << std::endl;
+//    }
+
     // client
     if(client)
     {
@@ -35,6 +51,7 @@ int main()
         }
 
         packet >> x;
+        packet.clear();
 
         if(x == 1)
         {
@@ -43,6 +60,10 @@ int main()
             while(1)
             {
                 std::cin >> s;
+                //std::cout << s << std::endl;
+//                packet << s;
+//                packet >> s;
+//                std::cout << s << std::endl;
 
                 packet << s;
                 if(socket.send(packet) != sf::Socket::Done)
@@ -93,6 +114,10 @@ int main()
                 }
 
                 std::cin >> s;
+                //std::cout << s << std::endl;
+//                packet << s;
+//                packet >> s;
+//                std::cout << s << std::endl;
 
                 packet << s;
                 if(socket.send(packet) != sf::Socket::Done)
@@ -161,6 +186,7 @@ int main()
             }
 
             std::string s;
+            packet.clear();
             while(1)
             {
                 if(client1.receive(packet) != sf::Socket::Done)
